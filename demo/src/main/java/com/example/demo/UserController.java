@@ -25,6 +25,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class UserController {
 	@Autowired
@@ -57,7 +59,7 @@ public class UserController {
 	
 	
 	@PostMapping(path = "/users")
-	public User createUser(@RequestBody User user) {
+	public User createUser(@Valid @RequestBody User user) {
 		User newUser = userService.addUser(user);
 		return newUser;
 	}

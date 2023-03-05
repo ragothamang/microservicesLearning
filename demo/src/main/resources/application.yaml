@@ -1,0 +1,7 @@
+logging:
+  level.org.springframework: info
+spring:
+  profiles:
+    active: dev
+  application:
+    name: userApp
