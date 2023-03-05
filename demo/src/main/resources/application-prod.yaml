@@ -1,0 +1,17 @@
+logging:
+  level.org.springframework: info
+spring:
+  application:
+    name: userAppProd
+  datasource:
+    url: jdbc:mysql://localhost:3306/user-database
+    username: admin
+    password: password
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+     hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect

@@ -2,6 +2,13 @@ logging:
   level.org.springframework: info
 spring:
   profiles:
-    active: dev
+    active: prod
   application:
     name: userApp
+  datasource:
+    url: jdbc:h2:mem:stage
+    username: admin
+    password: root
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true  
